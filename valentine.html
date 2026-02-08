@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Valentine ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background: linear-gradient(135deg, #c53aae, #fad0c4);
+        text-align: center;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin-top: 80px;
+        font-size: 3em;
+        color: white;
+        text-shadow: 2px 2px 5px #ff4d6d;
+    }
+
+    p {
+        font-size: 1.4em;
+        color: white;
+    }
+
+    .heart {
+        position: fixed;
+        color: red;
+        animation: floatUp 6s linear infinite;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(100vh); opacity: 1; }
+        100% { transform: translateY(-10vh); opacity: 0; }
+    }
+
+    .buttons {
+        margin-top: 40px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 30px;
+        margin: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #yesBtn {
+        background-color: #ff4d6d;
+        color: white;
+    }
+
+    #yesBtn:hover {
+        transform: scale(1.1);
+        background-color: #ff1e4d;
+    }
+
+    #noBtn {
+        background-color: white;
+        color: #ff4d6d;
+        position: absolute;
+    }
+
+    .message {
+        font-size: 2em;
+        margin-top: 30px;
+        color: white;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Hiii Dali Wami ❤️</h1>
+<p>I have something important to ask you...</p>
+<h1>Will you be my Valentine? 💌</h1>
+
+<div class="buttons">
+    <button id="yesBtn" onclick="sayYes()">YES 💖</button>
+    <button id="noBtn" onmouseover="moveNo()">No 🙈</button>
+</div>
+
+<div class="message" id="loveMessage">
+    YAYYY!!! 🥰 I’m the luckiest person alive 💞
+</div>
+
+<script>
+    function sayYes() {
+        document.getElementById("loveMessage").style.display = "block";
+    }
+
+    function moveNo() {
+        let btn = document.getElementById("noBtn");
+        let x = Math.random() * (window.innerWidth - 100);
+        let y = Math.random() * (window.innerHeight - 50);
+        btn.style.left = x + "px";
+        btn.style.top = y + "px";
+    }
+
+    function createHeart() {
+        let heart = document.createElement("div");
+        heart.innerHTML = "❤️";
+        heart.classList.add("heart");
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 15 + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+
+    setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
