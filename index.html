@@ -6,130 +6,129 @@
 <title>For My Valentine ❤️</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
+* { box-sizing: border-box; }
 
-    body {
-        margin: 0;
-        font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
-        background: linear-gradient(135deg, #ba49c9, #fad0c4);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        text-align: center;
-        padding: 20px;
-        overflow: hidden;
-    }
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #ba49c9, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
 
-    .card {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        border-radius: 25px;
-        padding: 30px 20px;
-        width: 100%;
-        max-width: 420px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
-    h1 {
-        color: white;
-        margin-bottom: 10px;
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
-    }
-    h1, p, .message {
-        text-shadow:
-            0 0 5px #ffffff,
-            0 0 10px #ffb3c1,
-            0 0 10px #ff4d6d,
-            0 0 10px #ff1e4d;
-    }
-    p {
-        color: white;
-        font-size: 1.1rem;
-        margin-bottom: 25px;
-    }
+h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
 
-    .buttons {
-        position: relative;
-        margin-top: 10px;
-        margin-left: -110px;
-    }
+h1, p, .message {
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffb3c1,
+        0 0 20px #ff4d6d,
+        0 0 30px #ff1e4d;
+}
 
+p {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 14px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    min-width: 120px;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.5);
+}
+
+#yesBtn:hover {
+    transform: scale(1.08);
+    background-color: #ff1e4d;
+}
+
+#noBtn {
+    background-color: white;
+    color: #ff4d6d;
+}
+
+.message {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    color: white;
+    display: none;
+    animation: pop 0.6s ease forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.heart {
+    position: fixed;
+    color: red;
+    animation: floatUp 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+@media (max-width: 400px) {
     button {
-        padding: 14px 25px;
-        font-size: 16px;
-        border: none;
-        border-radius: 30px;
-        margin: 10px;
-        cursor: pointer;
-        transition: 0.3s ease;
-        width: 130px;
-        max-width: 40%;
+        font-size: 14px;
+        padding: 12px 18px;
     }
-
-    #yesBtn {
-        background-color: #ff4d6d;
-        color: white;
-        box-shadow: 0 5px 15px rgba(255, 77, 109, 0.5);
-    }
-
-    #yesBtn:hover {
-        transform: scale(1.08);
-        background-color: #ff1e4d;
-    }
-
-    #noBtn {
-        background-color: white;
-        color: #ff4d6d;
-        position: absolute;
-    }
-
-    .message {
-        font-size: 1.6rem;
-        margin-top: 20px;
-        color: white;
-        display: none;
-        animation: pop 0.6s ease forwards;
-    }
-
-    @keyframes pop {
-        0% { transform: scale(0.5); opacity: 0; }
-        100% { transform: scale(1); opacity: 1; }
-    }
-
-    .heart {
-        position: fixed;
-        color: red;
-        animation: floatUp 6s linear infinite;
-        pointer-events: none;
-    }
-
-    @keyframes floatUp {
-        0% { transform: translateY(100vh); opacity: 1; }
-        100% { transform: translateY(-10vh); opacity: 0; }
-    }
-
-    @media (max-width: 400px) {
-        button {
-            font-size: 14px;
-            padding: 12px 18px;
-        }
-    }
+}
 </style>
 </head>
 
 <body>
 
 <div class="card">
-    <h1>Hiii Dali Wami ❤️</h1>
+    <h1>Hii Dali Wami ❤️</h1>
     <p>I have something important to ask you…</p>
     <h1>Will you be my Valentine? 💌</h1>
 
     <div class="buttons">
         <button id="yesBtn" onclick="sayYes()">YES 💖</button>
-        <button id="noBtn" onmouseover="moveNo()">No 🙈</button>
+        <button id="noBtn" onclick="moveNo(event)">No 🙈</button>
     </div>
 
     <div class="message" id="loveMessage">
@@ -138,31 +137,44 @@
 </div>
 
 <script>
-    function sayYes() {
-        document.getElementById("loveMessage").style.display = "block";
-    }
+function sayYes() {
+    document.getElementById("loveMessage").style.display = "block";
+}
 
-    function moveNo() {
-        let btn = document.getElementById("noBtn");
-        let x = Math.random() * (window.innerWidth - 1000);
-        let y = Math.random() * (window.innerHeight - 300);
-        btn.style.left = x + "px";
-        btn.style.top = y + "px";
-    }
+function moveNo(e) {
+    e.preventDefault();
 
-    function createHeart() {
-        let heart = document.createElement("div");
-        heart.innerHTML = "❤️";
-        heart.classList.add("heart");
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = Math.random() * 20 + 15 + "px";
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 6000);
-    }
+    const btn = document.getElementById("noBtn");
 
-    setInterval(createHeart, 300);
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    const btnWidth = btn.offsetWidth;
+    const btnHeight = btn.offsetHeight;
+
+    const maxX = screenWidth - btnWidth;
+    const maxY = screenHeight - btnHeight;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    btn.style.position = "fixed";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+
+function createHeart() {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}
+
+setInterval(createHeart, 300);
 </script>
 
 </body>
 </html>
-
